@@ -8,7 +8,7 @@
 </head>
 <body>
    <header>
-       <h1><a href="<?= $_SERVER['HTTP_REFERER'] ?>">Projecte J-Suite</a></h1>
+       <h1><a href="<?= $_SERVER['REQUEST_URI'] ?>">Projecte J-Suite</a></h1>
    </header>
    <h2>Homepage</h2>
    <p>My first PHP web app works!</p>
