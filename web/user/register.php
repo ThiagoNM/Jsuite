@@ -1,8 +1,8 @@
-<?php require_once __DIR__ . "/../vendor/autoload.php"; ?>
+<?php require_once __DIR__ . "/../../vendor/autoload.php"; ?>
 
 <!DOCTYPE html>
 <html lang="ca">
-<?= My\Helpers::render("/_commons/head.php", ["subtitle" => "Sign in"]) ?>
+<?= My\Helpers::render("/_commons/head.php", ["subtitle" => "Sign up"]) ?>
 <body>
     <?= My\Helpers::render("/_commons/header.php") ?>
     <h2>Sign up</h2>
