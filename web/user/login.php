@@ -11,14 +11,8 @@
    <header>
         <h1><a href="<?= My\Helpers::url("/") ?>">Projecte J-Suite</a></h1>
    </header>
-   <h2>Homepage</h2>
-   <p>My first PHP web app works!</p>
-   <ul>
-       <li>Operative system: <?= PHP_OS ?></li>
-       <li>Web server: <?= $_SERVER['SERVER_SOFTWARE'] ?></li>
-       <li>PHP version: <?= phpversion() ?></li>
-       <li>IP address: <?= getHostByName(getHostName()) ?></li>
-   </ul>
+   <h2>Sign in</h2>
+   <p>Welcome back!</p>
    <footer>
        <p>Curs 2021-22 de 2DAW</p>
    </footer>
