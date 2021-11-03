@@ -13,7 +13,7 @@ class Helpers {
    public static function url(string $path, bool $ssl = false): string 
    {
       $protocol = $ssl ? "https" : "http";
-      return "{$protocol}://localhost/tarda/projecto/web/{$path}";
+      return "{$protocol}://localhost/tarda/Jsuite/web{$path}";
    }
    public static function render(string $path, array $__params = []) : string 
    {
@@ -50,6 +50,20 @@ class Helpers {
            }
        }
    }
-
+   public static function flash(string $msg = "") : array
+   {
+       session_start();
+       $list = $_SESSION['flash'] ?? [];
+       if (empty($msg)) {
+           // Getter expires messages
+           unset($_SESSION['flash']);   
+       } else {
+           // Setter adds new messages
+           $list[] = $msg;
+           $_SESSION['flash'] = $list;
+       }
+       return $list;
+   }
+   
 }
 
