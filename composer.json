@@ -20,7 +20,8 @@
         "php":">7.3",
         "alrik11es/cowsayphp": "^1.2",
         "monolog/monolog": "2.x-dev",
-        "phpunit/phpunit": "9.5.x-dev"
+        "phpunit/phpunit": "9.5.x-dev",
+        "phpmailer/phpmailer": "dev-master"
     },
     "autoload": {
         "psr-4": {

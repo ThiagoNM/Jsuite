@@ -5,17 +5,17 @@ return [
        "security"  => "tls",
        "host"      => "smtp.gmail.com",
        "port"      => 587,
-       "username"  => "your-email@gmail.com",
-       "password"  => "your-gmail-password",
+       "username"  => "2daw.equip03@fp.insjoaquimmir.cat",
+       "password"  => "L8Ry4=",
        "debug"     => 1
    ],
    "from" => [
-       "name"      => "your-name",
-       "mail"      => "your-email@gmail.com"
+       "name"      => "Rodolfo",
+       "mail"      => "2daw.equip03@fp.insjoaquimmir.cat"
    ],
    "reply" => [
-       "name"      => "your-name",
-       "mail"      => "your-email@gmail.com"
+       "name"      => "Rodolfo",
+       "mail"      => "2daw.equip03@fp.insjoaquimmir.cat"
    ]
 ];
 
