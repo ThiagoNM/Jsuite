@@ -6,15 +6,15 @@ return [
        "host"      => "smtp.gmail.com",
        "port"      => 587,
        "username"  => "2daw.equip03@fp.insjoaquimmir.cat",
-       "password"  => "L8Ry4=",
+       "password"  => "Grupo03_",
        "debug"     => 1
    ],
    "from" => [
-       "name"      => "Rodolfo",
+       "name"      => "Grup3",
        "mail"      => "2daw.equip03@fp.insjoaquimmir.cat"
    ],
    "reply" => [
-       "name"      => "Rodolfo",
+       "name"      => "Grup3",
        "mail"      => "2daw.equip03@fp.insjoaquimmir.cat"
    ]
 ];

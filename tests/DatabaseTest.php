@@ -27,13 +27,12 @@ final class DatabaseTest extends TestCase
         $this->assertEquals($counter, 1);
 
         $db->close();
-
+        
+        $this->expectException(Exception::class);            
         $consulta = $db->prepare('SELECT email,role_id FROM users WHERE username = "admin"');
         $consulta->execute();
         $result = $consulta->fetchAll();
-
-        $counter = count($result);
-        $this->assertEquals($counter, 0);
+        
    }  
    
 
