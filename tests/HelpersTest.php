@@ -20,17 +20,15 @@ final class HelpersTest extends TestCase
         $this ->assertStringStartsWith("https://", $txt);
         $this ->assertStringEndsWith($path, $txt);
     }
+    public function testLog(): void
+    {
+        $logger = Helpers::log();
+        $this->assertIsObject($logger);
+        // Calling methods using object or directly works...
+        $logger->info("PHPUnit test");
+        Helpers::log()->debug("PHPUnit test");
+    }
+ 
 }
 
-/* final class StringStartsWithTest extends TestCase
-{
-    public function testFailure(): void
-    {
-        if ($ssl == False){
-            $this->assertStringStartsWith('prefix', "http://localhost/tarda/projecto/web/{$path}");
-        } 
-        else{
-            $this->assertStringStartsWith('prefix', "https://localhost/tarda/projecto/web/{$path}");
-        }
-    }
-} */
+
