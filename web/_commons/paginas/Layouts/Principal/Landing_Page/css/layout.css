@@ -1,0 +1,156 @@
+/* TOT */
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Arial;
+  background: #ffffff;
+}
+
+
+/* HEADER */
+
+#hdr{
+  width: 100%;
+  height: 9vw;      
+  background: #0083ff;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  /* box-shadow: 2px 2px 35px #888888; */
+}
+
+/* ARTICLE */
+
+#art{
+  width: 100%;
+  height: 41vw;
+  background-color: #ffffff;
+  float: left;
+}
+
+.art__foto{
+  width: 83%;
+  height: 18vw;
+  margin-top: 10%;
+  background-color: #00ADFF;
+  float: left;
+  margin-left: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.art__boto{
+  width: 30%;
+  height: 3vw;
+  margin-top: 2%;
+  background-color: #00ADFF;
+  float: left;
+  clear: left;
+  margin-left: 34%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+/* ARTICLE 2 */
+
+#art2{
+  width: 100%;
+  height: 53vw;
+  background-color: #00ADFF;
+  float: left;
+}
+
+.art2__foto2{
+  width: 30%;
+  height: 18vw;
+  margin-top: 9%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+.art2__desc{
+  width: 50%;
+  height: 18vw;
+  margin-top: 9%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 4%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+.art2__foto3{
+  width: 30%;
+  height: 18vw;
+  margin-top: 2%;
+  background-color: #ffffff;
+  float: left;
+  clear: right;
+  margin-left: 4%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+
+.art2__desc2{
+  width: 50%;
+  height: 18vw;
+  margin-top: 2%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 7%;
+  clear: right;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+/* FOOTER */
+
+#foot{
+  width: 100%;
+  height: 7vw;
+  text-align: center;
+  background-color: #424656;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}

@@ -1,0 +1,135 @@
+/* ----------Tipografies locals---------- */
+
+@font-face{
+    font-family: "JSuiteFont-Title";
+    src: url('../tipografia/Nexa-Trial-Heavy.ttf')
+}
+
+@font-face{
+    font-family: "JSuiteFont-Subtitle";
+    src: url('../tipografia/Nexa-Trial-Bold.ttf')
+}
+
+@font-face{
+    font-family: "JSuiteFont-";
+    src: url('../tipografia/')
+}
+
+/* ----------Clases---------- */
+
+.titol{
+    font-family: "JSuiteFont-Title";
+    font-size: 45px;
+    line-height: 50px;
+    margin: auto;
+}
+
+.subtitol{
+    font-family: "JSuiteFont-Subtitle";
+    font-size: 30px;
+    line-height: 40px;
+    margin: auto;
+}
+
+.text{
+    font-family: sans-serif;
+    font-size: 19px;
+}
+
+/* ----------Enllaços---------- */
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #00268A;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #00268A;
+}
+
+a:active{
+    text-decoration: underline;
+    color: #B3003D;
+}
+
+/* ----------Botons---------- */
+
+.boto--primari{
+    font-family: "JSuiteFont-Title";
+    display: inline-block;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right, #0083FF, #00268A);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.boto--primari:hover{
+    background-color: white;
+    transition: all 1s ease;
+    background: linear-gradient(to left, #0083FF, #00268A);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.boto--secondari{
+    font-family: "JSuiteFont-Title";
+    display: inline-block;
+    border-radius: 20px;
+    background-color: white;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #0083FF, #00268A);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.boto--secondari:hover{
+    color: white;
+    transition: all 1s ease;
+    background: linear-gradient(to top left, #0083FF, #00268A);
+}
+
+/* Capçalera */
+
+.capçalera__logo{
+    width: 300px;
+    height: 150px;
+}
+
+.capçalera__fotoPerfil{
+    width: 125px;
+    height: 125px;
+}
+
+.capçalera__missatgeria{
+    width: 50px;
+    height: 50px;
+}
+
+.capçalera__tema{
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Peu de pàgina */
+
+.peu__xarxa{
+    width: 30px;
+    height: 30px;
+}

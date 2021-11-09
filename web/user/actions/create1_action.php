@@ -1,3 +1,4 @@
+<?php
 // Data received?
 if (!empty($_POST)) {
    // Valid data?

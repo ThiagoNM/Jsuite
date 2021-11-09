@@ -1,0 +1,80 @@
+/* Box sizing reglas */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Esborrar estils dels elements ul, ol */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* Moviments de l'scroll */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Body per defecte */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Els elements A que no tinguin una classe, agafaràn l'estil per defecte */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Treballar millor amb les imatges */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Heredació de les fonts per a inputs i botons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea {
+    white-space: revert;
+}
+
+/* Esborra totes les animacions i transicions per aquelles persones que no les volen veure */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }

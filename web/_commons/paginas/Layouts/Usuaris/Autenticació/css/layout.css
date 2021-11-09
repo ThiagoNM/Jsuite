@@ -1,0 +1,71 @@
+/* TOT */
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Arial;
+  background: #0083ff;
+}
+
+
+/* HEADER */
+
+#hdr .hdr__logo{
+  width: 20%;
+  height: 5vw;
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  background-color: #b3b3b3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+/* ARTICLE */
+
+#art{
+  width: 50%;
+  height: 30vw;
+  text-align: center;
+  margin-top: 5%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 25%;
+}
+
+.art__titol{
+  width: 60%;
+  height: 5vw;
+  margin-top: 6%;
+  margin-left: 20%;
+  background-color: #00ADFF;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.art__form{
+  width: 60%;
+  height: 18vw;
+  margin-top: 2%;
+  margin-left: 20%;
+  background-color: #00ADFF;
+  float: left;
+  clear: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
