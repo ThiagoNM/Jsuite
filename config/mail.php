@@ -5,8 +5,8 @@ return [
        "security"  => "tls",
        "host"      => "smtp.gmail.com",
        "port"      => 587,
-       "username"  => "2daw.equip03@fp.insjoaquimmir.cat",
-       "password"  => "Grupo03_",
+       "username"  => "demo@fp.insjoaquimmir.cat",
+       "password"  => "demo",
        "debug"     => 1
    ],
    "from" => [
