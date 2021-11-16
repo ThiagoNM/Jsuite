@@ -6,7 +6,5 @@ return [
    "port"      => 3306,
    "database"  => "demo",
    "user"      => "demo",
-   "password"  => "dbpass",
-   "options"   => [
-];
+   "password"  => "dbpass"
 ?>
