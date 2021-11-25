@@ -1,0 +1,796 @@
+/* TOT */
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Arial;
+  background: #F23F6B;
+}
+
+
+/* HEADER */
+
+.hdr{
+  width: 100%;
+  height: 9vw;      
+  background: #0083ff;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  /* box-shadow: 2px 2px 35px #888888; */
+}
+
+.artLP{
+  width: 100%;
+  height: 41vw;
+  background-color: #ffffff;
+  float: left;
+}
+
+.artLP__foto{
+  width: 83%;
+  height: 18vw;
+  margin-top: 10%;
+  background-color: #00ADFF;
+  float: left;
+  margin-left: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.artLP__boto{
+  width: 30%;
+  height: 3vw;
+  margin-top: 2%;
+  background-color: #00ADFF;
+  float: left;
+  clear: left;
+  margin-left: 34%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+/* ARTICLE 2 */
+
+.art2LP{
+  width: 100%;
+  height: 53vw;
+  background-color: #00ADFF;
+  float: left;
+}
+
+.art2LP__foto2{
+  width: 30%;
+  height: 18vw;
+  margin-top: 9%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+.art2LP__desc{
+  width: 50%;
+  height: 18vw;
+  margin-top: 9%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 4%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+.art2LP__foto3{
+  width: 30%;
+  height: 18vw;
+  margin-top: 2%;
+  background-color: #ffffff;
+  float: left;
+  clear: right;
+  margin-left: 4%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+
+.art2LP__desc2{
+  width: 50%;
+  height: 18vw;
+  margin-top: 2%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 7%;
+  clear: right;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+
+
+/* ASIDE 1 */
+  
+.as1PI{
+  width: 20%;
+  height: 41vw;
+  background-color: #B3003D;
+  float: left;
+}
+
+.as1PI__busqueda{
+  width: 100%;
+  height: 4vw;
+  background-color: #00268A;
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as1PI__botonera1{
+  width: 100%;
+  height: 15vw;
+  background-color: #00268A;
+  margin-top: 11%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as1PI__botonera2{
+  width: 100%;
+  height: 15vw;
+  background-color: #00268A;
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+
+/* ASIDE 2 */
+
+.as2PI{
+  width: 20%;
+  height: 41vw;
+  background-color: #B3003D;
+  float: right;
+}
+
+.as2PI__calendari{
+  width: 100%;
+  height: 18vw;
+  background-color: #00268A;
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as2PI__recordatoris{
+  width: 100%;
+  height: 18vw;
+  background-color: #00268A;
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+
+/* ARTICLE */
+
+.artPI{
+  width: 60%;
+  height: 41vw;
+  background-color: #F23F6B;
+  float: left;
+}
+
+.artPI__apps{
+  width: 100%;
+  height: 41vw;
+  background-color: #00ADFF;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+/* ASIDE 1 */
+  
+.as1Chat{
+  width: 20%;
+  height: 41vw;
+  background-color: #B3003D;
+  float: left;
+}
+
+.as1Chat__busqueda{
+  width: 100%;
+  height: 4vw;
+  background-color: #00268A;
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as1Chat__botonera1{
+  width: 100%;
+  height: 15vw;
+  background-color: #00268A;
+  margin-top: 11%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as1Chat__botonera2{
+  width: 100%;
+  height: 15vw;
+  background-color: #00268A;
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+
+/* ASIDE 2 */
+
+.as2Chat{
+  width: 20%;
+  height: 41vw;
+  background-color: #B3003D;
+  float: right;
+  overflow: auto;
+}
+
+.as2Chat__titol{
+  width: 100%;
+  height: 5vw;
+  margin-top: 2%;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as2Chat__cercar{
+  width: 100%;
+  height: 2vw;
+  margin-top: 5%;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as2Chat__missatges{
+  width: 100%;
+  height: 3vw;
+  margin-top: 2%;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as2Chat__chats{
+  width: 100%;
+  height: 20vw;
+  margin-top: 2%;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as2Chat__grups{
+  width: 100%;
+  height: 20vw;
+  margin-top: 2%;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.as2Chat__contactes{
+  width: 100%;
+  height: 20vw;
+  margin-top: 2%;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+
+/* ARTICLE */
+
+.artChat{
+  width: 60%;
+  height: 41vw;
+  background-color: #F23F6B;
+  float: left;
+}
+
+.artChat__apps{
+  width: 100%;
+  height: 41vw;
+  background-color: #00ADFF;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+/* ARTICLE */
+
+.artIn{
+  width: 60%;
+  height: 41vw;
+  text-align: center;
+  background-color: #ffffff;
+  float: left;
+}
+
+.artIn__botons{
+  width: 100%;
+  height: 6vw;
+  background-color: #ffffff;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #00ADFF;
+}
+
+.artIn__incidencies{
+    width: 100%;
+    height: 35vw;
+    background-color: #00ADFF;
+    float: left;
+    clear: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+/* ARTICLE 2*/
+
+.artIn2{
+  width: 40%;
+  height: 41vw;
+  text-align: center;
+  background-color: #af3b3b;
+  float: right;
+}
+
+.artIn2__registre{
+  width: 100%;
+  height: 41vw;
+  background-color: #F23F6B;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+ 
+/* ARTICLE */
+
+.artCom{
+  width: 40%;
+  height: 41vw;
+  text-align: center;
+  background-color: #ffffff;
+  float: left;
+}
+
+.artCom__label{
+    width: 100%;
+    height: 41vw;
+    background-color: #00ADFF;
+    float: left;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+/* ARTICLE 2*/
+
+.art2Com{
+  width: 30%;
+  height: 41vw;
+  text-align: center;
+  background-color: #00268A;
+  float: left;
+}
+
+.art2Com__botons{
+  width: 100%;
+  height: 10vw;
+  background-color: #00268A;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.art2Com__totes{
+  width: 100%;
+  height: 35vw;
+  background-color: #B3003D;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+
+
+/* ARTICLE 3*/
+
+.art3Com{
+  width: 30%;
+  height: 41vw;
+  text-align: center;
+  background-color: #ffffff;
+  float: right;
+}
+
+.art3Com__registre{
+  width: 100%;
+  height: 41vw;
+  background-color: #F23F6B;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+  /* HEADER */
+  
+  .hdr{
+    width: 100%;
+    height: 9vw;      
+    background: #0083ff;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+    /* box-shadow: 2px 2px 35px #888888; */
+  }
+  
+   
+  /* ARTICLE */
+  
+  .artInv{
+    width: 100%;
+    height: 41vw;
+    text-align: center;
+    background-color: #ffffff;
+    float: left;
+  }
+  
+  .artInv__esquema{
+    width: 40%;
+    height: 27vw;
+    margin-top: 7%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    clear: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+  }
+  
+  .artInv__pisos{
+    width: 20%;
+    height: 27vw;
+    margin-top: 7%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+  }
+  
+  .artInv__gestio{
+    width: 20%;
+    height: 27vw;
+    margin-top: 7%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+  }
+
+  
+  
+.artSeg{
+  width: 100%;
+  height: 41vw;
+  text-align: center;
+  background-color: #ffffff;
+  float: left;
+}
+
+.artSeg__titol{
+  width: 92%;
+  height: 5vw;
+  margin-top: 2.5%;
+  margin-left: 4%;
+  background-color: #00ADFF;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.artSeg__usuaris{
+    width: 20%;
+    height: 27vw;
+    margin-top: 4%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    clear: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+.artSeg__rols{
+    width: 20%;
+    height: 27vw;
+    margin-top: 4%;
+    margin-left: 16%;
+    background-color: #00ADFF;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+.artSeg__permisos{
+    width: 20%;
+    height: 27vw;
+    margin-top: 4%;
+    margin-left: 16%;
+    background-color: #00ADFF;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+.artTas{
+  width: 100%;
+  height: 41vw;
+  text-align: center;
+  background-color: #ffffff;
+  float: left;
+}
+
+.artTas__botons{
+  width: 20%;
+  height: 2vw;
+  margin-top: 4%;
+  margin-left: 4%;
+  background-color: #00ADFF;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.artTas__noFetes{
+    width: 20%;
+    height: 27vw;
+    margin-top: 4%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    clear: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+.artTas__proces{
+    width: 20%;
+    height: 27vw;
+    margin-top: 4%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+.artTas__fet{
+    width: 20%;
+    height: 27vw;
+    margin-top: 4%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+
+.artTas__filtrar{
+    width: 20%;
+    height: 27vw;
+    margin-top: 4%;
+    margin-left: 4%;
+    background-color: #00ADFF;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1vw;
+    color: white;
+}
+/* FOOTER */
+
+.foot{
+  width: 100%;
+  height: 7vw;
+  text-align: center;
+  background-color: #424656;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}

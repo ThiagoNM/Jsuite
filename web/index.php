@@ -2,22 +2,33 @@
 
 <!DOCTYPE html>
 <html lang="ca">
-<?= My\Helpers::render("/_commons/head.php", ["subtitle" => "Sign in"]) ?>
-<?php
-       My\Helpers::log()->info("Entro a la pàgina d'inici");
-       My\Helpers::log()->debug("Entro a una pàgina", ["page" => basename(__FILE__)]);
-    ?>
-<body>
+    
+<?= My\Helpers::render("/_commons/head.php", ["subtitle" => "Pàgina d'inici"]) ?>
+
+<body class = "container">
+
     <?= My\Helpers::render("/_commons/header.php") ?>
-    <h2>Homepage</h2>
-    <p>My first PHP web app works!</p>
-    <ul>
-        <li>Operative system: <?= PHP_OS ?></li>
-        <li>Web server: <?= $_SERVER['SERVER_SOFTWARE'] ?></li>
-        <li>PHP version: <?= phpversion() ?></li>
-        <li>IP address: <?= getHostByName(getHostName()) ?></li>
-    </ul>
+
+    <aside class="as1PI">
+
+    <div class = "container2">
+        <div class="as1PI__calendari">CALENDARI</div>
+        <div class="as1PI__recordatoris">RECORDATORIS</div>
+      </div>
+
+    </aside>
+
+    <article class="artPI">APLICACIONS</article>
+
+    <aside class="as2PI">
+      <div class = "container3">
+        <div class="as2PI__cerca">BUSCAR</div>
+        <div class="as2PI__filtrar">FILTRAR</div>
+      </div>
+    </aside>
+
     <?= My\Helpers::render("/_commons/footer.php") ?>
+
 </body>
 </html>
 
