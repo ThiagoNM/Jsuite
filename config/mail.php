@@ -7,7 +7,7 @@ return [
        "port"      => 587,
        "username"  => "2daw.equip03@fp.insjoaquimmir.cat",
        "password"  => "Grupo03_",
-       "debug"     => 1
+       "debug"     => 0
    ],
    "from" => [
        "name"      => "Grup3",

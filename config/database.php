@@ -12,4 +12,10 @@ return [
        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
    ]
 ];
-?>
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$database", $user, $password);
+
+} catch (PDOException $exception) {
+    echo "A fallat la conexion a la base: {$exception->getMessage()}";
+}
