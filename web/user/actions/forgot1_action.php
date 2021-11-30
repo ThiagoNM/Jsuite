@@ -34,7 +34,7 @@ if (!empty($_POST)) {
                 $sql = $database -> prepare("SELECT `email`, `id`, `username` FROM `2daw.equip03`.users WHERE email=?");
                 // $sql = bindParam(':email', $_POST['email']);
                 $sql -> execute([$email]);
-
+                
                 $bool = false;
 
                 foreach($sql as $fila){

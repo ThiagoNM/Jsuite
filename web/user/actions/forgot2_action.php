@@ -14,6 +14,7 @@ if (!empty($_POST)) {
         $pass2 = $_POST["contrasenya2"];
         $token = $_POST["token"];
         
+        
 
         $validator = new Validator;
 
@@ -50,8 +51,10 @@ if (!empty($_POST)) {
             }
 
             if ($bool) {
+                
+                $pass3 = hash('sha256', $_POST['$pass2']);
 
-                $sql2 = $database -> prepare("UPDATE `2daw.equip03`.users SET password = '{$pass2}' WHERE id = '{$id}'");
+                $sql2 = $database -> prepare("UPDATE `2daw.equip03`.users SET password = '{$pass3}' WHERE id = '{$id}'");
                 $sql2 -> execute();
 
                 $database->close();
