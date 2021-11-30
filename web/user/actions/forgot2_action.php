@@ -11,7 +11,7 @@ if (!empty($_POST)) {
     if (!empty($_POST["contrasenya"]) && (!empty($_POST["contrasenya2"]))) {
 
         $pass = $_POST["contrasenya"];
-        $pass2 = $_POST["contrasenya2"];
+        $pass3 = hash('sha256', $_POST["contrasenya2"]);
         $token = $_POST["token"];
         
         
@@ -52,7 +52,7 @@ if (!empty($_POST)) {
 
             if ($bool) {
                 
-                $pass3 = hash('sha256', $_POST['$pass2']);
+                
 
                 $sql2 = $database -> prepare("UPDATE `2daw.equip03`.users SET password = '{$pass3}' WHERE id = '{$id}'");
                 $sql2 -> execute();
@@ -71,6 +71,7 @@ if (!empty($_POST)) {
 
         $url = My\Helpers::url("/user/forgot2.php");
         My\Helpers::redirect($url);
+        My\Helpers::flash("Contrasenya canviada");
 
     }
 }
