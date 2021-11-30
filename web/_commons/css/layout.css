@@ -1,0 +1,375 @@
+@font-face{
+  font-family: "JSuiteFont-Title";
+  src: url('../tipografia/Nexa-Trial-Heavy.ttf')
+}
+
+@font-face{
+  font-family: "JSuiteFont-Subtitle";
+  src: url('../tipografia/Nexa-Trial-Bold.ttf')
+}
+
+@font-face{
+  font-family: "JSuiteFont-";
+  src: url('../tipografia/')
+}
+
+/* TOT */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 1.2rem;
+  min-height: 100%;
+  background: #F23F6B;
+}
+
+/** ----- COMPARTIR -----**/
+
+.hdr{
+  grid-area: header;
+  background-color: #0083ff;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  display: grid;
+  font-family: "JSuiteFont-Title";
+  /* box-shadow: 2px 2px 35px #888888; */
+}
+
+.foot{
+  grid-area: footer;
+  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  display: grid;
+  font-family: "JSuiteFont-Title";
+}
+
+
+/** ----- PÀGINA INICI -----**/
+
+/* ASIDE 1 */
+  
+.as1PI{
+  grid-area: sidebar;
+  background-color: #B3003D;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  display: grid;
+  font-family: "JSuiteFont-Subtitle";
+}
+
+.as2PI__cerca{
+  grid-area: tercer;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  font-family: "JSuiteFont-Subtitle";
+}
+
+.as2PI__filtrar{
+  grid-area: cuart;
+  background-color: #424656;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  font-family: "JSuiteFont-Subtitle";
+}
+
+/* ASIDE 2 */
+
+.as2PI{
+  grid-area: sidebar2;
+  background-color: #B3003D;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  display: grid;
+  font-family: "JSuiteFont-Subtitle";
+}
+
+.as1PI__calendari{
+  grid-area: primer;
+  background-color: #00268A;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  font-family: "JSuiteFont-Subtitle";
+}
+
+.as1PI__recordatoris{
+  grid-area: segon;
+  background-color: #424656;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  font-weight: bold;
+  font-size: 1vw;
+  font-family: "JSuiteFont-Subtitle";
+  color: white;
+}
+
+
+/* ARTICLE */
+
+.artPI{
+  grid-area: main;
+  background-color: #00ADFF;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  display: grid;
+  font-family: "JSuiteFont-Subtitle";
+}
+
+
+.container {
+  display: grid;
+  grid-template:
+    "header"  75px
+    "sidebar2"  100px
+    "main"    auto
+    "sidebar" 210px
+    "footer"  100px;
+}
+
+.container2 {
+  display: grid;
+  grid-template:
+    "primer segon"  125px /
+    150px  150px;
+}
+
+.container3 {
+  display: grid;
+  grid-template:
+    "tercer" 40px
+    "cuart"  40px /
+    250px  auto;
+}
+
+
+/* --------------------------- */ 
+
+
+@media (min-width: 1200px) {
+  .container {
+    grid-template:
+      "header  header header"  150px
+      "sidebar2  main   sidebar" auto
+      "footer  footer footer"  100px /
+      300px    auto   300px;
+  }
+}
+
+/* ------------------------------ */
+
+
+@media (min-width: 600px) {
+  .container2 {
+    grid-template:
+      "primer segon" 160px /
+      250px  250px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container2 {
+    grid-template:
+      "primer" 350px
+      "segon"  350px /
+      250px  auto;
+  }
+}
+
+
+/* ------------------------------ */
+
+
+@media (min-width: 600px) {
+  .container3 {
+    grid-template:
+      "tercer" 40px 
+      "cuart" 40px /
+      500px  auto;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container3 {
+    grid-template:
+      "tercer" 350px
+      "cuart"  350px /
+      250px  auto;
+  }
+}
+
+
+
+
+
+/** ----- PÀGINES USUARIS (AUTENTICACIÓ, REGISTRE, CANVIAR CONTRASENYES) -----**/
+
+
+/* HEADER */
+
+.hdr2 .hdr2__logo{
+  width: 20%;
+  height: 5vw;
+  margin-top: 5%;
+  margin: 0 auto;
+  color: white;
+  background-color: #b3b3b3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+/* ARTICLE */
+
+.art{
+  width: 50%;
+  height: 30vw;
+  text-align: center;
+  margin-top: 5%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 25%;
+}
+
+.art__titol{
+  width: 60%;
+  height: 5vw;
+  margin-top: 6%;
+  margin-left: 20%;
+  background-color: #00ADFF;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.art__form{
+  width: 60%;
+  height: 18vw;
+  margin-top: 2%;
+  margin-left: 20%;
+  background-color: #00ADFF;
+  float: left;
+  clear: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+
+/** ----- PÀGINA USUARI (EDITAR PERFIL) -----**/
+
+.hdr3{
+  width: 100%;
+  height: 8vw;
+  margin-top: 5%;
+  margin: 0 auto;
+  color: white;
+  background-color: #00ADFF;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.artEP{
+  width: 70%;
+  height: 37vw;
+  text-align: center;
+  margin-top: 4%;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 15%;
+}
+
+.artEP__titol{
+  width: 60%;
+  height: 5vw;
+  margin-top: 6%;
+  margin-left: 20%;
+  background-color: #00ADFF;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.artEP__form{
+  width: 60%;
+  height: 18vw;
+  margin-top: 2%;
+  margin-left: 20%;
+  background-color: #00ADFF;
+  float: left;
+  clear: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
+
+.foot2{
+  width: 100%;
+  height: 7vw;
+  text-align: center;
+  background-color: black;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+}
