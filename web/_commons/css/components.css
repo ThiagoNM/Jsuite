@@ -1,0 +1,257 @@
+@font-face{
+  font-family: "JSuiteFont-Title";
+  src: url('../tipografia/Nexa-Trial-Heavy.ttf')
+}
+
+@font-face{
+  font-family: "JSuiteFont-Subtitle";
+  src: url('../tipografia/Nexa-Trial-Bold.ttf')
+}
+
+@font-face{
+  font-family: "JSuiteFont-";
+  src: url('../tipografia/')
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 1.6em;
+  background-color: #0083ff;
+
+}
+
+/* HEADER */
+
+.capçalera{
+  grid-area: header;
+  width: 100%;
+  background-color: #0083ff;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+  display: grid;
+  background: linear-gradient(to bottom right, #00268A, #0083FF);
+  /* box-shadow: 2px 2px 35px #888888; */
+}
+
+
+.formulari {
+  background: white;
+  width: 600px;
+  height: 750px;
+  border-radius: 9px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  display: grid;
+  margin-top: 3%;
+  font-family: "JSuiteFont-Subtitle";
+  margin: 0 auto;
+}
+
+.formulari__grup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+
+.formulari__grup label {
+  display: grid;
+  margin: 0 0 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.formulari__grup input {
+  outline: none;
+  display: grid;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Arial;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+}
+
+.formulari__grup input {
+  color: #000000;
+}
+
+.formulari__grup input:focus {
+  color: #0083ff;
+}
+
+.formulari__grup button {
+  outline: none;
+  background: #424656;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.formulari__grup button {
+  background: #424656;
+  color: #ffffff;
+}
+
+.formulari__grup .formulari__recordar {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.formulari__grup .formulari__recordar input[type='checkbox'] {
+  display: inline-block;
+  width: auto;
+  margin: 0 10px 0 0;
+}
+
+.formulari__grup .formulari__recuperar {
+  color: #4285F4;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.formulari__panell {
+  padding: 60px calc(4% + 60px) 60px;
+  box-sizing: border-box;
+}
+
+.formulari__capcalera {
+  margin: 0 0 40px;
+}
+
+.formulari__capcalera h1 {
+  padding: 4px;
+  color: #4285F4;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.foto__perfil{
+  height: 100px;
+  margin: 0 150px;
+}
+
+.logo{
+
+  width: 58%;
+  margin-top: -7%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.capçalera__logo{
+  width: 14%;
+  height: 100%;
+  float: left;
+  margin-top: -0.1%;
+  margin-left: 2%;
+}
+
+.capçalera__fotoPerfil{
+  width: 5%;
+  height: 70%;
+  margin-right: 1.3%;
+  float: right;
+  margin-top: 1.1%;
+}
+
+.capçalera__missatgeria{
+  width: 2.4%;
+  height: 30%;
+  float: right;
+  margin-top: 4%;
+}
+
+.capçalera__tema{
+  width: 2.5%;
+  height: 30%;
+  float: right;
+  margin-top: 4%;
+}
+
+h2.capçalera__nom{
+  float: right;
+  font-size: 170%;
+  margin-top: 1%;
+  margin-right: -4.5%;
+  font-family: "JSuiteFont-Subtitle";
+}
+
+/* .foot{
+  width: 100%;
+  height: 7vw;
+  text-align: center;
+  background-color: black;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
+} */
+
+table{
+    width: 40%;
+}
+
+tr ,th ,td ,table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #0083ff;
+    color: white;
+}
+
+li{
+    list-style: none;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .formulari {
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .formulari {
+    width: 350px;
+    height: 550px;
+    margin: 0 auto;
+  }
+}
