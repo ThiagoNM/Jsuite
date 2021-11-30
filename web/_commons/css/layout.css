@@ -1,61 +1,41 @@
-@font-face{
-  font-family: "JSuiteFont-Title";
-  src: url('../tipografia/Nexa-Trial-Heavy.ttf')
-}
-
-@font-face{
-  font-family: "JSuiteFont-Subtitle";
-  src: url('../tipografia/Nexa-Trial-Bold.ttf')
-}
-
-@font-face{
-  font-family: "JSuiteFont-";
-  src: url('../tipografia/')
-}
-
 /* TOT */
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100%;
+  margin: 0 auto;
 }
 
 body {
-  font-size: 1.2rem;
-  min-height: 100%;
+  font-family: Arial;
   background: #F23F6B;
 }
+
 
 /** ----- COMPARTIR -----**/
 
 .hdr{
-  grid-area: header;
-  background-color: #0083ff;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 7vw;      
+  background: linear-gradient(to bottom right, #00268A, #0083FF);
   font-weight: bold;
   font-size: 1vw;
   color: white;
-  display: grid;
-  font-family: "JSuiteFont-Title";
   /* box-shadow: 2px 2px 35px #888888; */
 }
 
 .foot{
-  grid-area: footer;
-  background-color: #000000;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 7vw;
+  background-color: #000000;
   font-weight: bold;
   font-size: 1vw;
   color: white;
-  display: grid;
-  font-family: "JSuiteFont-Title";
 }
 
 
@@ -63,77 +43,90 @@ body {
 
 /* ASIDE 1 */
   
+.all{
+  display: flex;
+}
+
 .as1PI{
-  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 41vw;
   background-color: #B3003D;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1vw;
-  color: white;
-  display: grid;
-  font-family: "JSuiteFont-Subtitle";
 }
 
-.as2PI__cerca{
-  grid-area: tercer;
+.as1PI__cerca{
+  width: 100%;
+  height: 4vw;
   background-color: #00268A;
+  margin-top: 7%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: grid;
   font-weight: bold;
   font-size: 1vw;
   color: white;
-  font-family: "JSuiteFont-Subtitle";
 }
 
-.as2PI__filtrar{
-  grid-area: cuart;
-  background-color: #424656;
+.as1PI__botonera1{
+  width: 100%;
+  height: 15vw;
+  background-color: #00268A;
+  margin-top: 11%;
   justify-content: center;
   align-items: center;
-  display: grid;
+  display: flex;
   font-weight: bold;
   font-size: 1vw;
   color: white;
-  font-family: "JSuiteFont-Subtitle";
+}
+
+.as1PI__botonera2{
+  width: 100%;
+  height: 15vw;
+  background-color: #00268A;
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1vw;
+  color: white;
 }
 
 /* ASIDE 2 */
 
 .as2PI{
-  grid-area: sidebar2;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 41vw;
   background-color: #B3003D;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1vw;
-  color: white;
-  display: grid;
-  font-family: "JSuiteFont-Subtitle";
 }
 
-.as1PI__calendari{
-  grid-area: primer;
+.as2PI__calendari{
+  width: 100%;
+  height: 18vw;
   background-color: #00268A;
+  margin-top: 7%;
   justify-content: center;
   align-items: center;
-  display: grid;
+  display: flex;
   font-weight: bold;
   font-size: 1vw;
   color: white;
-  font-family: "JSuiteFont-Subtitle";
 }
 
-.as1PI__recordatoris{
-  grid-area: segon;
-  background-color: #424656;
+.as2PI__recordatoris{
+  width: 100%;
+  height: 18vw;
+  background-color: #00268A;
+  margin-top: 7%;
   justify-content: center;
   align-items: center;
-  display: grid;
+  display: flex;
   font-weight: bold;
   font-size: 1vw;
-  font-family: "JSuiteFont-Subtitle";
   color: white;
 }
 
@@ -141,235 +134,94 @@ body {
 /* ARTICLE */
 
 .artPI{
-  grid-area: main;
-  background-color: #00ADFF;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1vw;
-  color: white;
-  display: grid;
-  font-family: "JSuiteFont-Subtitle";
-}
-
-
-.container {
-  display: grid;
-  grid-template:
-    "header"  75px
-    "sidebar2"  100px
-    "main"    auto
-    "sidebar" 210px
-    "footer"  100px;
-}
-
-.container2 {
-  display: grid;
-  grid-template:
-    "primer segon"  125px /
-    150px  150px;
-}
-
-.container3 {
-  display: grid;
-  grid-template:
-    "tercer" 40px
-    "cuart"  40px /
-    250px  auto;
-}
-
-
-/* --------------------------- */ 
-
-
-@media (min-width: 1200px) {
-  .container {
-    grid-template:
-      "header  header header"  150px
-      "sidebar2  main   sidebar" auto
-      "footer  footer footer"  100px /
-      300px    auto   300px;
-  }
-}
-
-/* ------------------------------ */
-
-
-@media (min-width: 600px) {
-  .container2 {
-    grid-template:
-      "primer segon" 160px /
-      250px  250px;
-  }
-}
-
-
-@media (min-width: 1200px) {
-  .container2 {
-    grid-template:
-      "primer" 350px
-      "segon"  350px /
-      250px  auto;
-  }
-}
-
-
-/* ------------------------------ */
-
-
-@media (min-width: 600px) {
-  .container3 {
-    grid-template:
-      "tercer" 40px 
-      "cuart" 40px /
-      500px  auto;
-  }
-}
-
-
-@media (min-width: 1200px) {
-  .container3 {
-    grid-template:
-      "tercer" 350px
-      "cuart"  350px /
-      250px  auto;
-  }
-}
-
-
-
-
-
-/** ----- PÀGINES USUARIS (AUTENTICACIÓ, REGISTRE, CANVIAR CONTRASENYES) -----**/
-
-
-/* HEADER */
-
-.hdr2 .hdr2__logo{
-  width: 20%;
-  height: 5vw;
-  margin-top: 5%;
-  margin: 0 auto;
-  color: white;
-  background-color: #b3b3b3;
-  justify-content: center;
-  align-items: center;
   display: flex;
-  font-weight: bold;
-  font-size: 2vw;
-}
-
-/* ARTICLE */
-
-.art{
-  width: 50%;
-  height: 30vw;
-  text-align: center;
-  margin-top: 5%;
-  background-color: #ffffff;
-  float: left;
-  margin-left: 25%;
-}
-
-.art__titol{
+  flex-direction: column;
   width: 60%;
-  height: 5vw;
-  margin-top: 6%;
-  margin-left: 20%;
-  background-color: #00ADFF;
-  float: left;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-weight: bold;
-  font-size: 1vw;
-  color: white;
+  height: 41vw;
+  background-color: #F23F6B;
 }
 
-.art__form{
-  width: 60%;
-  height: 18vw;
-  margin-top: 2%;
-  margin-left: 20%;
-  background-color: #00ADFF;
-  float: left;
-  clear: left;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-weight: bold;
-  font-size: 1vw;
-  color: white;
-}
-
-
-/** ----- PÀGINA USUARI (EDITAR PERFIL) -----**/
-
-.hdr3{
+.artPI__apps{
   width: 100%;
-  height: 8vw;
-  margin-top: 5%;
-  margin: 0 auto;
-  color: white;
+  height: 41vw;
   background-color: #00ADFF;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
-  font-weight: bold;
-  font-size: 2vw;
-}
-
-.artEP{
-  width: 70%;
-  height: 37vw;
-  text-align: center;
-  margin-top: 4%;
-  background-color: #ffffff;
-  float: left;
-  margin-left: 15%;
-}
-
-.artEP__titol{
-  width: 60%;
-  height: 5vw;
-  margin-top: 6%;
-  margin-left: 20%;
-  background-color: #00ADFF;
-  float: left;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   font-weight: bold;
   font-size: 1vw;
   color: white;
 }
 
-.artEP__form{
-  width: 60%;
-  height: 18vw;
-  margin-top: 2%;
-  margin-left: 20%;
-  background-color: #00ADFF;
-  float: left;
-  clear: left;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-weight: bold;
-  font-size: 1vw;
-  color: white;
-}
+/* QUERY */
 
-.foot2{
-  width: 100%;
-  height: 7vw;
-  text-align: center;
-  background-color: black;
-  float: left;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-weight: bold;
-  font-size: 1vw;
-  color: white;
+@media screen and (max-width: 1690px){
+  .all{
+    display: block;
+
+  }
+
+  .as1PI{
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    height: 10vw;
+
+  }
+
+  .as1PI__cerca{
+    margin-top: auto;
+    width: 100%;
+    position: absolute;
+  }
+
+  .as1PI__botonera1{
+    margin-top: 4%;
+
+  }
+
+  .as1PI__botonera2{
+    margin-top: 4%;
+
+  }
+
+  .artPI{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 9%;
+    flex-wrap: wrap;
+    height: 50vw;
+
+  }
+
+  .artPI__apps{
+    height: 100%;
+    
+  }
+
+  .as2PI{
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    height: 10vw;
+
+  }
+
+  .as2PI__calendari{
+    margin-top: auto;
+
+  }
+  
+  .as2PI__recordatoris{
+    margin-top: auto;
+    
+  }
+
+  .foot{
+    flex-direction: row;
+    position: fixed;
+    bottom: 0; 
+  }
+  
 }

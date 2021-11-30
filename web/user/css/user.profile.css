@@ -8,10 +8,10 @@
   src: url('../tipografia/Nexa-Trial-Bold.ttf')
 }
 
-@font-face{
+/* @font-face{
   font-family: "JSuiteFont-";
   src: url('../tipografia/')
-}
+} */
 
 html {
     width: 100%;
@@ -30,14 +30,14 @@ body {
 
 .capçalera{
   width: 100%;
-  height: 8vw;      
+  height: 7vw;      
   background: white;
   float: left;
   font-weight: bold;
   font-size: 1vw;
+  background: linear-gradient(to bottom right, #00268A, #0083FF);
   /* box-shadow: 2px 2px 35px #888888; */
 }
-
 
 .formulari {
   background: white;
@@ -132,6 +132,10 @@ body {
   text-decoration: none;
 }
 
+input:disabled{
+  background-color: grey;
+}
+
 .formulari__panell {
   padding: 60px calc(4% + 60px) 60px;
   box-sizing: border-box;
@@ -157,7 +161,7 @@ body {
 .logo{
 
   width: 58%;
-  margin-top: 1%;
+  margin-top: -7%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -199,10 +203,6 @@ h2.capçalera__nom{
   margin-top: 1%;
   margin-right: -4.5%;
   font-family: "JSuiteFont-Subtitle";
-}
-
-.foot{
-  margin-top: 2%;
 }
 
 table{
