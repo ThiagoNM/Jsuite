@@ -20,14 +20,14 @@ final class HelpersTest extends TestCase
         $this ->assertStringStartsWith("https://", $txt);
         $this ->assertStringEndsWith($path, $txt);
     }
-    public function testLog(): void
-    {
-        $logger = Helpers::log();
-        $this->assertIsObject($logger);
-        // Calling methods using object or directly works...
-        $logger->info("PHPUnit test");
-        Helpers::log()->debug("PHPUnit test");
-    }
+   // public function testLog(): void
+   // {
+   //     $logger = Helpers::log();
+   //     $this->assertIsObject($logger);
+   //     // Calling methods using object or directly works...
+   //     $logger->info("PHPUnit test");
+   //     Helpers::log()->debug("PHPUnit test");
+   // }
  
 }
 

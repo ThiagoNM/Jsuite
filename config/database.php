@@ -2,9 +2,14 @@
  
 return [
    "driver"    => "mysql",
-   "host"      => "127.0.0.1",
-   "port"      => 3306,
+   "host"      => "alumnes.insjoaquimmir.cat",
+   "port"      => 9316,
    "database"  => "demo",
    "user"      => "demo",
-   "password"  => "dbpass"
+   "password"  => "VGz739ghGmQU",
+   "options"   => [
+       PDO::MYSQL_ATTR_SSL_KEY                => __DIR__ . '/client-key.pem',
+       PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
+   ]
+];
 ?>
