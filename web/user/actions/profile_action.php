@@ -75,7 +75,7 @@ if (!empty($_POST)) {
 
                 } else {
                     My\Helpers::flash("L'usuari no existeix");
-                    $url = My\Helpers::url("/user/forgot1.php");
+                    $url = My\Helpers::url("/user/profile.php");
                     My\Helpers::redirect($url);
                 }
 
