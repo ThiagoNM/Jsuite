@@ -48,6 +48,7 @@ class Helpers {
        ob_end_clean();
        return $content;
    }
+   
    public static function redirect(string $url) : string 
    {
        ob_flush(); // use ob_clean() instead to discard previous output       
@@ -73,6 +74,7 @@ class Helpers {
            }
        }
    }
+
    public static function flash(string $msg = "") : array
    {
        session_start();

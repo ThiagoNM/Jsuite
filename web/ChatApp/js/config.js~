@@ -1,4 +1,7 @@
+import { Messages } from "./Messages.js";
+import { MessagesList } from "./MessagesList.js";
 
+var llista = new MessagesList();
 
 document.querySelector("#opcio1").addEventListener("click"  ,() => {
 

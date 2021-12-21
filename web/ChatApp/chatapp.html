@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatApp</title>
     <link rel="stylesheet" href="../_commons/css/components.css">
-    <script defer src="js/config.js"></script>
+    <script defer src="./js/config.js"></script>
+    <script defer type="module" src="./js/Messages.js"></script>
+    <script defer type="module" src="./js/MessagesList.js"></script>
 </head>
 <body>
     <div class="formulari">
@@ -24,9 +26,9 @@
                     <select name="grup" id="grup"></select>
                     <select disabled name="destinatari" id="destinatari"></select><br><br>
 
-                    <div class="formulari__grup"><label for="password">Missatge</label><input type="text" id="missatge" name="missatge"/></div><br>
+                    <div class="formulari__grup"><label for="missatge">Missatge</label><input type="text" id="missatge" name="missatge"/></div><br>
 
-                    <div class="formulari__grup"><button type="submit">Enviar</button></div>
+                    <div class="formulari__grup"><button id="botoEnviar" type="submit">Enviar</button></div>
                     <div class="formulari__grup"><button type="submit">Cancel·lar</button></div>
                 </form>
             </div>
