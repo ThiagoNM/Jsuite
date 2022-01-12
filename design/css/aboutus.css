@@ -1,0 +1,30 @@
+#perfil img.bottom{
+  filter: contrast(150%);
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+  /* -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out; */
+  
+}
+
+#perfil img.top{
+  filter: grayscale(100%);
+  transition: opacity 1s ease-in-out;
+  /* -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out; */
+}
+
+/* #text:hover:before span{
+  content:"Programador professional";
+}
+
+#text:hover span {
+  display: none;
+} */
+
+
+#perfil img.top:hover {
+  opacity:0;
+}
