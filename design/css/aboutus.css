@@ -1,6 +1,10 @@
+h3{
+  text-align: center;
+}
+
 #perfil{
   margin: 0 auto;
-  width: 15%;
+  width: 252px;
   border: 1px solid black;
 }
 
