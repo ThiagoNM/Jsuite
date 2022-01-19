@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
-
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
