@@ -1,0 +1,31 @@
+#perfil{
+  margin: 0 auto;
+  width: 15%;
+  border: 1px solid black;
+}
+
+#perfil img{
+  transition: opacity 1s ease-in-out;
+}
+
+#perfil img.bottom{
+  position: absolute;
+  filter: contrast(150%);
+}
+
+#perfil img.top{
+  filter: grayscale(100%);
+}
+
+
+
+#perfil img.top:hover {
+  opacity:0;
+}
+
+#perfil:after{
+  content:'Programador';
+}
+#perfil:hover:after{
+  content:'Programador professional';
+}
