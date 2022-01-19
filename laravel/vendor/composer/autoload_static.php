@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit16c00b3483c6a921aab206168197e0dc
+class ComposerStaticInitcfa4f0bbf5144ffee403d634471a4905
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -2396,6 +2396,7 @@ class ComposerStaticInit16c00b3483c6a921aab206168197e0dc
         'Illuminate\\Queue\\Worker' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Worker.php',
         'Illuminate\\Queue\\WorkerOptions' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/WorkerOptions.php',
         'Illuminate\\Redis\\Connections\\Connection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/Connection.php',
+        'Illuminate\\Redis\\Connections\\PacksPhpRedisValues' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PacksPhpRedisValues.php',
         'Illuminate\\Redis\\Connections\\PhpRedisClusterConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PhpRedisClusterConnection.php',
         'Illuminate\\Redis\\Connections\\PhpRedisConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PhpRedisConnection.php',
         'Illuminate\\Redis\\Connections\\PredisClusterConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Redis/Connections/PredisClusterConnection.php',
@@ -5538,10 +5539,10 @@ class ComposerStaticInit16c00b3483c6a921aab206168197e0dc
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit16c00b3483c6a921aab206168197e0dc::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit16c00b3483c6a921aab206168197e0dc::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit16c00b3483c6a921aab206168197e0dc::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit16c00b3483c6a921aab206168197e0dc::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcfa4f0bbf5144ffee403d634471a4905::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcfa4f0bbf5144ffee403d634471a4905::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitcfa4f0bbf5144ffee403d634471a4905::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitcfa4f0bbf5144ffee403d634471a4905::$classMap;
 
         }, null, ClassLoader::class);
     }

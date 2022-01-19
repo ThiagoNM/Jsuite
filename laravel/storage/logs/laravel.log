@@ -1,311 +1,128 @@
-[2022-01-14 18:04:00] testing.INFO: Loading welcome page  
-[2022-01-14 18:04:39] testing.INFO: Loading welcome page  
-[2022-01-14 18:04:53] testing.INFO: Loading welcome page  
-[2022-01-14 18:04:59] testing.INFO: Loading welcome page  
-[2022-01-14 18:08:16] testing.INFO: Loading welcome page  
-[2022-01-14 18:08:49] testing.INFO: Loading welcome page  
-[2022-01-14 18:08:56] testing.INFO: Loading welcome page  
-[2022-01-14 18:19:43] testing.INFO: Loading welcome page  
-[2022-01-14 18:26:28] local.INFO: Loading welcome page  
-[2022-01-14 18:26:40] local.ERROR: Target class [SendEmailController] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [SendEmailController] does not exist. at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:879)
-[stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#31 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#32 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#33 {main}
+[2022-01-19 16:49:27] testing.INFO: Loading welcome page  
+[2022-01-19 16:49:44] testing.INFO: Loading welcome page  
+[2022-01-19 16:49:49] testing.INFO: Loading welcome page  
+[2022-01-19 16:50:28] testing.INFO: Loading welcome page  
+[2022-01-19 16:50:52] local.INFO: Loading welcome page  
+[2022-01-19 16:54:10] local.INFO: Loading welcome page  
+[2022-01-19 17:34:35] local.ERROR: Command "make:flash" is not defined.
 
-[previous exception] [object] (ReflectionException(code: -1): Class SendEmailController does not exist at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:877)
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    queue:flush {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:flash\" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    queue:flush at /var/www/html/tarda/Jsuite/laravel/vendor/symfony/console/Application.php:709)
 [stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#31 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#32 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#33 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#34 {main}
+#0 /var/www/html/tarda/Jsuite/laravel/vendor/symfony/console/Application.php(259): Symfony\\Component\\Console\\Application->find()
+#1 /var/www/html/tarda/Jsuite/laravel/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run()
+#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#4 /var/www/html/tarda/Jsuite/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
 "} 
-[2022-01-14 18:27:39] local.INFO: Loading welcome page  
-[2022-01-14 18:28:42] local.ERROR: Target class [SendEmailController] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [SendEmailController] does not exist. at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:879)
-[stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#31 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#32 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#33 {main}
+[2022-01-19 17:34:44] local.ERROR: Command "make:flash" is not defined.
 
-[previous exception] [object] (ReflectionException(code: -1): Class SendEmailController does not exist at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:877)
-[stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#31 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#32 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#33 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#34 {main}
-"} 
-[2022-01-14 18:30:02] local.INFO: Loading welcome page  
-[2022-01-14 18:30:08] local.ERROR: Target class [SendEmailController] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [SendEmailController] does not exist. at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:879)
-[stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#31 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#32 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#33 {main}
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    queue:flush {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:flash\" is not defined.
 
-[previous exception] [object] (ReflectionException(code: -1): Class SendEmailController does not exist at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:877)
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    queue:flush at /var/www/html/tarda/Jsuite/laravel/vendor/symfony/console/Application.php:709)
 [stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#31 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#32 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#33 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#34 {main}
-"} 
-[2022-01-14 18:31:13] local.ERROR: Target class [SendEmailController] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [SendEmailController] does not exist. at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:879)
-[stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#31 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#32 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#33 {main}
-
-[previous exception] [object] (ReflectionException(code: -1): Class SendEmailController does not exist at /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:877)
-[stacktrace]
-#0 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct()
-#1 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\\Container\\Container->build()
-#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\\Container\\Container->resolve()
-#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\\Foundation\\Application->resolve()
-#4 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\\Container\\Container->make()
-#5 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(276): Illuminate\\Foundation\\Application->make()
-#6 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1069): Illuminate\\Routing\\Route->getController()
-#7 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(1012): Illuminate\\Routing\\Route->controllerMiddleware()
-#8 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(708): Illuminate\\Routing\\Route->gatherMiddleware()
-#9 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(688): Illuminate\\Routing\\Router->gatherRouteMiddleware()
-#10 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#11 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#12 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#13 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
-#14 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#15 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#16 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#17 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#18 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#19 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#20 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#21 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#23 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#25 /var/www/html/tarda/Jsuite/laravel/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#27 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#29 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
-#31 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#32 /var/www/html/tarda/Jsuite/laravel/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#33 /var/www/html/tarda/Jsuite/laravel/server.php(21): require_once('/var/www/html/t...')
-#34 {main}
+#0 /var/www/html/tarda/Jsuite/laravel/vendor/symfony/console/Application.php(259): Symfony\\Component\\Console\\Application->find()
+#1 /var/www/html/tarda/Jsuite/laravel/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#2 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run()
+#3 /var/www/html/tarda/Jsuite/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#4 /var/www/html/tarda/Jsuite/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
 "} 
