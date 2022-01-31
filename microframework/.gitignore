@@ -1,7 +1,0 @@
-vendor
-composer
-composer.phar
-composer.lock
-config/database.php
-config/mail.php
-logs/app.log
