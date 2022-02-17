@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Message;
+use App\Models\Chat;
 
-class MessageController extends Controller
+class ChatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
-        return \response($messages);
+        $chats = Chat::all();
+        return \response($chats);
     }
 
     /**
@@ -27,14 +27,13 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'message' => 'required|max:255',
-            'chat_id' => 'required',
+            'name' => 'required|max:255',
             'author_id' => 'required'
 
         ]);
 
-        $message = Message::create($request->all());
-        return \response($message);
+        $chat = Chat::create($request->all());
+        return \response($chat);
     }
 
     /**
@@ -45,8 +44,8 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-        $message = Message::findOrFail($id);
-        return \response($message);
+        $chat = Chat::findOrFail($id);
+        return \response($chat);
     }
 
     /**
@@ -58,9 +57,9 @@ class MessageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Message::findOrFail($id)
+        Chat::findOrFail($id)
             ->update($request->all());
-        return \response("Mensaje actualizado.");
+        return \response("Chat actualizado.");
     }
 
     /**
@@ -71,7 +70,7 @@ class MessageController extends Controller
      */
     public function destroy($id)
     {
-        Message::destroy($id);
-        return \response("El mensaje con el id: ${id} ha sido eliminado.");
+        Chat::destroy($id);
+        return \response("El chat con el id: ${id} ha sido eliminado.");
     }
 }

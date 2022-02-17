@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UsersController;
-use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('tasks', TaskController::class);
 Route::get('users', [UsersController::class, 'index']);
-Route::apiResource('messages', MessageController::class);
-
+Route::apiResource('chats', ChatController::class);
+Route::apiResource('chats/{id}/messages', MessageController::class);
