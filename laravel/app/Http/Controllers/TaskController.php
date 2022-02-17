@@ -27,9 +27,10 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'description' => 'required|max:255',
-            'status' => 'required'
+            'title' => 'required',
+//            'ticket_id' => 'required',
+            'completion_id' => 'required',
+            'author_id' => 'required'
 
         ]);
 
