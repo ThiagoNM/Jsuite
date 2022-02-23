@@ -77,8 +77,6 @@ body {
     color: white;
 }
 
-
-
 footer{
     padding: 2%;
     background-color: #3a4052;
@@ -90,13 +88,6 @@ footer h2 {
 	margin: 20px 0;
 	color: white;
 }
-
-/* <!----- MAPBOX ----->
-/* #map{
-	width: 1200px;
-	height: 500px;
-	margin: 0 auto;
-} */
 
 .about-map{
 	height: 25vw; 
