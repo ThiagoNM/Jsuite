@@ -15,6 +15,7 @@
 
 
 // MAPA
+
 var map = L.map('mapa').setView([41.231322284217, 1.7281074555046259], 18);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     attribution: '<a href="https://www.instagram.com/pedreleee23/" target="_blank">@pedrele23©</a>',
@@ -23,6 +24,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     tileSize: 512,
     zoomOffset: -1
 }).addTo(map);
+
 
 // 1 MARCADOR
 var marker = L.circle([41.23118511665772, 1.7280967266692684], {radius: 30, color: 'black'}).bindPopup('INSTITUT').addTo(map);
