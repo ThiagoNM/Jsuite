@@ -18,10 +18,13 @@ class MessagesTests extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $response = $this->post('/api/chats/40/messages', ['message' => 'Hola', "author_id" => '2', "chat_id" => "40"]);
+        $response = $this->post('/api/chats/41/messages', ['message' => 'Hola', "author_id" => '2', "chat_id" => "41"]);
         $response->assertOk();
 
         $content = $response->getContent();
+
+        $json = json_decode($content);
+        return $json->id;
     }
 
     /**
@@ -34,7 +37,7 @@ class MessagesTests extends TestCase
     public function test_read($id)
     {
         $this->withoutExceptionHandling();
-        $response = $this->get("/api/chats/40/messages");
+        $response = $this->get("/api/chats/{$id}/messages");
         $response->assertStatus(200);
     }
 
@@ -48,7 +51,7 @@ class MessagesTests extends TestCase
     public function test_update($id)
     {
         $this->withoutExceptionHandling();
-        $response = $this->put("/api/chats/40/messages/1", ['message' => 'hola prova']);
+        $response = $this->put("/api/chats/{$id}/messages/32", ['message' => 'hola prova']);
         $response->assertOk();
     }
 
@@ -62,7 +65,7 @@ class MessagesTests extends TestCase
     public function test_delete($id)
     {
         $this->withoutExceptionHandling();
-        $response = $this->delete("/api/chats/40/messages/1");
+        $response = $this->delete("/api/chats/{$id}/messages/1");
         $response->assertStatus(200);
     }
 
@@ -73,10 +76,10 @@ class MessagesTests extends TestCase
      * 
      * @depends test_create
      */
-    public function test_list()
+    public function test_list($id)
     {
         $this->withoutExceptionHandling();
-        $response = $this->get('/api/chats/40/messages');
+        $response = $this->get('/api/chats/{$id}/messages');
         $response->assertOk();
     }
 

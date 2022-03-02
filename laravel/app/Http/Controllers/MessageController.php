@@ -13,15 +13,10 @@ class MessageController extends Controller
      * @param Integer $cid The Chat ID
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($cid)
     {
-
-        $results = Message::where('id',$cid)
-        ->where('chat_id',$id)
-        ->get();
-        
-        return \response($results);
-
+        $chats = Message::where('chat_id', $cid)->get();
+        return \response($chats);
     }
 
     /**
@@ -56,11 +51,15 @@ class MessageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($cid)
+    public function show($cid, $id)
     {
 
-        $messages = Message::where('id', $cid)::all();
-        return \response($messages);
+        $results = Message::where('id',$id)
+        ->where('chat_id',$cid)
+        ->get();
+        
+        return \response($results);
+
     }
 
     /**
