@@ -25,4 +25,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('tasks', TaskController::class);
 Route::get('users', [UsersController::class, 'index']);
 Route::apiResource('chats', ChatController::class);
-Route::apiResource('chats/{id}/messages', MessageController::class);
+Route::apiResource('chats/{cid}/messages', MessageController::class);

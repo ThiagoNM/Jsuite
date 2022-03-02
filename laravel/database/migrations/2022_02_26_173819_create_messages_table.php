@@ -16,16 +16,12 @@ class CreateMessagesTable extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('message');
-            $table->integer('chat_id');
+            $table->unsignedInteger('chat_id');
             $table->integer('author_id');
             $table->timestamps();
 
-            
-
-        });
-
-        Schema::table('messages', function (Blueprint $table) {
             $table->foreign('chat_id')->references('id')->on('chats');
+
         });
     }
 
@@ -36,6 +32,6 @@ class CreateMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('messagess');
     }
 }
