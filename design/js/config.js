@@ -41,7 +41,6 @@ if (navigator.geolocation) {
 function mostrarPosicio(position) {
     
     var marker2 = L.circle([position.coords.latitude, position.coords.longitude], {radius: 30, color: 'red'}).bindPopup('ESTÀS PER AQUESTA ZONA').addTo(map);
-    marker2.openPopup();
 
     Mousetrap.bind('ctrl+shift+k', function(e) {
         alert(position.coords.latitude + " " + position.coords.longitude)
