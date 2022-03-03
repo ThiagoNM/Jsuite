@@ -25,3 +25,4 @@ Route::apiResource('tasks', TaskController::class);
 
 Route::get('users', [UsersController::class, 'index']);
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
