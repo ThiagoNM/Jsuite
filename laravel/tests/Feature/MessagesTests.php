@@ -18,7 +18,7 @@ class MessagesTests extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $response = $this->post('/api/chats/41/messages', ['message' => 'Hola', "author_id" => '2', "chat_id" => "41"]);
+        $response = $this->post('/api/chats/1/messages', ['message' => 'Hola', "author_id" => '2', "chat_id" => "1"]);
         $response->assertOk();
 
         $content = $response->getContent();
@@ -51,7 +51,7 @@ class MessagesTests extends TestCase
     public function test_update($id)
     {
         $this->withoutExceptionHandling();
-        $response = $this->put("/api/chats/{$id}/messages/32", ['message' => 'hola prova']);
+        $response = $this->put("/api/chats/{$id}/messages/2", ['message' => 'hola prova']);
         $response->assertOk();
     }
 
