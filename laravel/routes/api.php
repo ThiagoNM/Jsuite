@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\UsersController;
 
 /*
@@ -21,5 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('tasks', TaskController::class);
+Route::apiResource('notes', NoteController::class);
 
 Route::get('users', [UsersController::class, 'index']);

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
+use App\Models\Note;
 use Illuminate\Http\Request;
 
-class TaskController extends Controller
+class NoteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        return \response($tasks);
+        $notes = Note::all();
+        return \response($notes);
     }
 
     /**
@@ -27,15 +27,13 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'completion_id' => 'required',
-            'author_id' => 'required'
+            'body' => 'required',
+            'task_id' => 'required'
 
         ]);
 
-        $task = Task::create($request->all());
-        return \response($task);
-
+        $note = Note::create($request->all());
+        return \response($note);
     }
 
     /**
@@ -46,8 +44,8 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        $task = Task::findOrFail($id);
-        return \response($task);
+        $note = Note::findOrFail($id);
+        return \response($note);
     }
 
     /**
@@ -59,9 +57,9 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Task::findOrFail($id)
+        Note::findOrFail($id)
             ->update($request->all());
-        return \response("Tarea actualizada.");
+        return \response("Nota actualizada.");
     }
 
     /**
@@ -72,7 +70,7 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        Task::destroy($id);
+        Note::destroy($id);
         return \response("La tarea con el id: ${id} ha sido eliminada.");
     }
 }
