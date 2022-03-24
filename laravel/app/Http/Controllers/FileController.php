@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class FileController extends Controller
 {
@@ -17,7 +18,6 @@ class FileController extends Controller
         return view("files.index", [
             "files" => File::all()
         ]);
- 
     }
 
     /**
@@ -27,8 +27,8 @@ class FileController extends Controller
      */
     public function create()
     {
-
-    }
+        return view('files.create');
+    }   
 
     /**
      * Store a newly created resource in storage.
@@ -38,12 +38,17 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('avatar')->store(
-            'storage', 'app'
-        );
+        $validation = Validator::make($request->all(), [
+            'file' => 'required|mimes:jpeg,png,gif|max:2048',
+        ]);
 
-        // return $path;
+        if($validation->fails())
+        {
+            return back()->with('error','Ocurrió un error!');
+        }
 
+        $path = $request->file('file')->store('public/storage');
+        return back()->with('success','Imatge enviada correctament!');
     }
 
     /**
@@ -54,7 +59,8 @@ class FileController extends Controller
      */
     public function show(File $file)
     {
-        //
+        $file1 = File::find($file);
+        return view('vista')->with('file', $file1);
     }
 
     /**
@@ -65,7 +71,9 @@ class FileController extends Controller
      */
     public function edit(File $file)
     {
-        //
+        $file2 = File::find($file);
+
+        return View::make('vista')->with('vista', $file2);
     }
 
     /**
@@ -89,14 +97,23 @@ class FileController extends Controller
      */
     public function destroy(File $file)
     {
-        try{
-            File::delete($file);
-            return "El fichero fue borrado correctamente.";
 
-        }catch (Exception $e){
-            return "El fichero introducido no existe.";
+        try {
+            $this->authorize('delete', $file);
+            $file->delete();
+            return redirect()
+                ->action('vista') //\App\Http\Controllers\FileController@my_files
+                ->with("Se borró correctamente.");
+        }  catch (\Exception $e) {
+            report($e);
         }
+
+        // try{
+        //     File::delete($file);
+        //     return "El fichero fue borrado correctamente.";
+
+        // }catch (Exception $e){
+        //     return "El fichero introducido no existe.";
+        // }
     }
 }
-
-//https://enlear.academy/crud-example-with-image-upload-in-laravel-8-d35cb95575f2
