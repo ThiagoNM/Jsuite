@@ -1,17 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-
-<form role="form" method="POST" action="{{ route('files.store') }}" enctype="multipart/form-data">
-
-  @csrf  
-  @include('flash-message')
-  <div class="form-group d-flex justify-content-center">
-      <input type="file" class="form-control-file" name="file">
-  <br>
-  <button type="submit" class="btn btn-primary">Guardar</button>
-  </div>
   
-</form>
+  @include('flash-message')
+
+  @if ($errors->any())
+  <div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+  </div>
+  @endif
+
+  <form method="post" action="{{ route('files.store') }}" enctype="multipart/form-data">
+    @csrf
+    <div class="form-group">
+        <label for="upload">File:</label>
+        <input type="file" class="form-control" name="upload"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
 
 @endsection

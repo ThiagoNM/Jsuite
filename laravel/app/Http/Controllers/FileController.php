@@ -38,17 +38,55 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        $validation = Validator::make($request->all(), [
-            'file' => 'required|mimes:jpeg,png,gif|max:2048',
-        ]);
+        // $validation = Validator::make($request->all(), [
+        //     'file' => 'required|mimes:jpeg,png,gif|max:2048',
+        // ]);
 
-        if($validation->fails())
-        {
-            return back()->with('error','Ocurrió un error!');
-        }
+        // if($validation->fails())
+        // {
+        //     return back()->with('error','Ocurrió un error!');
+        // }
 
-        $path = $request->file('file')->store('public/storage');
-        return back()->with('success','Imatge enviada correctament!');
+        // $path = $request->file('file')->store('public/storage');
+        // return back()->with('success','Imatge enviada correctament!');
+
+       $validatedData = $request->validate([
+           'upload' => 'required|mimes:gif,jpeg,jpg,png|max:1024'
+       ]);
+      
+       $upload = $request->file('upload');
+       $fileName = $upload->getClientOriginalName();
+       $fileSize = $upload->getSize();
+       \Log::debug("Storing file '{$fileName}' ($fileSize)...");
+ 
+       $uploadName = time() . '_' . $fileName;
+       $filePath = $upload->storeAs(
+           'uploads',    
+           $uploadName,   
+           'public'        
+       );
+      
+       if (\Storage::disk('public')->exists($filePath)) {
+           \Log::debug("Local storage OK");
+
+           $fullPath = \Storage::disk('public')->path($filePath);
+           \Log::debug("File saved at {$fullPath}");
+           $file = File::create([
+               'filepath' => $filePath,
+               'filesize' => $fileSize,
+           ]);
+
+           \Log::debug("DB storage OK");
+
+           return redirect()->route('files.show', $file)
+               ->with('success', 'File successfully saved');
+       } else {
+
+           \Log::debug("Local storage FAILS");
+           return redirect()->route("files.create")
+               ->with('error', 'ERROR uploading file');
+       }
+
     }
 
     /**
@@ -59,8 +97,7 @@ class FileController extends Controller
      */
     public function show(File $file)
     {
-        $file1 = File::find($file);
-        return view('vista')->with('file', $file1);
+        return view('files.show');
     }
 
     /**
