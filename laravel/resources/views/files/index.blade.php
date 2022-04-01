@@ -29,6 +29,7 @@
                            @endforeach
                        </tbody>
                    </table>
+                   <a class="btn btn-primary" href="{{ route('files.create') }}" role="button">Add new file</a>
                </div>
            </div>
        </div>

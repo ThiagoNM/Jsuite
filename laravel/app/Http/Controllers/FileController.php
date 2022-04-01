@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
 {
@@ -38,17 +39,6 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        // $validation = Validator::make($request->all(), [
-        //     'file' => 'required|mimes:jpeg,png,gif|max:2048',
-        // ]);
-
-        // if($validation->fails())
-        // {
-        //     return back()->with('error','Ocurrió un error!');
-        // }
-
-        // $path = $request->file('file')->store('public/storage');
-        // return back()->with('success','Imatge enviada correctament!');
 
        $validatedData = $request->validate([
            'upload' => 'required|mimes:gif,jpeg,jpg,png|max:1024'
@@ -97,10 +87,12 @@ class FileController extends Controller
      */
     public function show(File $file)
     {
-        return view('files.show');
+        return view('files.show',  [
+            "fitxer" => $file
+        ]);
     }
 
-    /**
+    /** 
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\File  $file
@@ -108,9 +100,9 @@ class FileController extends Controller
      */
     public function edit(File $file)
     {
-        $file2 = File::find($file);
-
-        return View::make('vista')->with('vista', $file2);
+        return view('files.edit',  [
+            "fitxer" => $file
+        ]);
     }
 
     /**
@@ -122,8 +114,9 @@ class FileController extends Controller
      */
     public function update(Request $request, File $file)
     {
-        $path = $request->file($file)->store($request);
-        return $path;
+        return view('files.edit',  [
+            "fitxer" => $file
+        ]);
     }
 
     /**
@@ -144,13 +137,5 @@ class FileController extends Controller
         }  catch (\Exception $e) {
             report($e);
         }
-
-        // try{
-        //     File::delete($file);
-        //     return "El fichero fue borrado correctamente.";
-
-        // }catch (Exception $e){
-        //     return "El fichero introducido no existe.";
-        // }
     }
 }
