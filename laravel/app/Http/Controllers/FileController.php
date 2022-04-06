@@ -51,9 +51,9 @@ class FileController extends Controller
  
        $uploadName = time() . '_' . $fileName;
        $filePath = $upload->storeAs(
-           'uploads',    
-           $uploadName,   
-           'public'        
+           'uploads',    // path
+           $uploadName,   //filename
+           'public'        //disk
        );
       
        if (\Storage::disk('public')->exists($filePath)) {
@@ -120,18 +120,45 @@ class FileController extends Controller
      */
     public function update(Request $request, File $file)
     {
-        $prod = $request->all();
 
-        if($imagen = $request->file('upload')){
-            $rutaGuardarImg = 'storage/uploads';
-            $imagenp = $file->filepath;
-            $imagen->move($rutaGuardarImg, $imagenp);
-            $prod['upload'] = "$imagenp";
-        }else{
-            unset($prod['upload']);
+        $validatedData = $request->validate([
+            'upload' => 'required|mimes:gif,jpeg,jpg,png|max:2048'
+        ]);
+        
+        $antigua_ruta = $file -> filepath;
+        $upload = $request->file('upload');
+        $fileName = $upload->getClientOriginalName();
+        $fileSize = $upload->getSize();
+        \Log::debug("Storing file '{$fileName}' ($fileSize)...");
+  
+        $uploadName = time() . '_' . $fileName;
+        $filePath = $upload->storeAs(
+            'uploads',    
+            $uploadName,   
+            'public'        
+        );
+       
+        if (\Storage::disk('public')->exists($filePath)) {
+            \Log::debug("Local storage OK");
+ 
+            $fullPath = \Storage::disk('public')->path($filePath);
+            \Log::debug("File saved at {$fullPath}");
+            
+            $file->filepath = $filePath;
+            $file->filesize = $fileSize;
+            $file->save();
+            
+            \Log::debug("DB storage OK");
+            Storage::disk('public')->delete($antigua_ruta);
+
+            return redirect()->route('files.show', $file)
+                ->with('success', 'File successfully saved');
+        } else {
+ 
+            \Log::debug("Local storage FAILS");
+            return redirect()->route("files.edit")
+                ->with('error', 'ERROR uploading file');
         }
-
-        $file->update($prod);
 
     }
 
