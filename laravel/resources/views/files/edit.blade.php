@@ -34,8 +34,9 @@
         </div>
     </div>
 
-  <form method="post" action="{{ route('files.update', $fitxer) }}" enctype="multipart/form-data">
+  <form method="POST" action="{{ route('files.update', $fitxer->id) }}" enctype="multipart/form-data">
     @csrf
+    @method("PUT")
     <div class="form-group">
         <label for="upload">File:</label>
         <input type="file" class="form-control" name="upload"/>

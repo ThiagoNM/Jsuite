@@ -41,7 +41,7 @@ class FileController extends Controller
     {
 
        $validatedData = $request->validate([
-           'upload' => 'required|mimes:gif,jpeg,jpg,png|max:1024'
+           'upload' => 'required|mimes:gif,jpeg,jpg,png|max:2048'
        ]);
       
        $upload = $request->file('upload');
@@ -87,9 +87,15 @@ class FileController extends Controller
      */
     public function show(File $file)
     {
-        return view('files.show',  [
-            "fitxer" => $file
-        ]);
+        if (Storage::disk('public')->exists($file->filepath))
+        {
+            return view('files.show',  [
+                "fitxer" => $file
+            ]);
+        }else{
+            return redirect()->route("files.index")
+                ->with('error', 'ERROR the image was not found!');
+        }
     }
 
     /** 
@@ -114,9 +120,19 @@ class FileController extends Controller
      */
     public function update(Request $request, File $file)
     {
-        return view('files.edit',  [
-            "fitxer" => $file
-        ]);
+        $prod = $request->all();
+
+        if($imagen = $request->file('upload')){
+            $rutaGuardarImg = 'storage/uploads';
+            $imagenp = $file->filepath;
+            $imagen->move($rutaGuardarImg, $imagenp);
+            $prod['upload'] = "$imagenp";
+        }else{
+            unset($prod['upload']);
+        }
+
+        $file->update($prod);
+
     }
 
     /**
@@ -127,15 +143,16 @@ class FileController extends Controller
      */
     public function destroy(File $file)
     {
+        $file->delete();
+        Storage::disk('public')->delete($file->filepath);
 
-        try {
-            $this->authorize('delete', $file);
-            $file->delete();
-            return redirect()
-                ->action('vista') //\App\Http\Controllers\FileController@my_files
-                ->with("Se borró correctamente.");
-        }  catch (\Exception $e) {
-            report($e);
+        if (!Storage::disk('public')->exists($file->filepath))
+        {
+            return redirect()->route("files.index")
+                ->with('success', 'Image deleted successfully!');
+        }else{
+            return redirect()->route("files.show", $file)
+                ->with('error', 'ERROR the image was not deleted!');
         }
     }
 }
