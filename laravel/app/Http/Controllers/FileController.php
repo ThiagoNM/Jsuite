@@ -170,8 +170,8 @@ class FileController extends Controller
      */
     public function destroy(File $file)
     {
-        $file->delete();
         Storage::disk('public')->delete($file->filepath);
+        $file->delete();
 
         if (!Storage::disk('public')->exists($file->filepath))
         {
