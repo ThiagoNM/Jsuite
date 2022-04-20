@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SecurityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +38,7 @@ require __DIR__.'/auth.php';
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('files', FileController::class)->middleware(['auth', 'role:3']);
+Route::resource('files', FileController::class)->middleware(['auth', 'roles:3']);
+Route::resource('security/users', UsersController::class)->middleware(['auth', 'roles:1,4']);
+Route::resource('security/roles', RoleController::class)->middleware(['auth', 'roles:1,4']);
+Route::resource('security', SecurityController::class)->middleware(['auth', 'roles:1,4']);

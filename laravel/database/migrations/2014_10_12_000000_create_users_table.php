@@ -20,6 +20,11 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->unsignedBigInteger('photo_id')->nullable();
+            $table->foreign('photo_id')
+            ->references('id')->on('files')
+            ->onUpdate('cascade')
+            ->onDelete('set null');
             $table->timestamps();
         });
     }
