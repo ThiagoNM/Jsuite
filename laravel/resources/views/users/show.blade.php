@@ -16,6 +16,7 @@
             <p class="card-text"><strong>Id:</strong> {{$user->id}}</p>
             <p class="card-text"><strong>Username:</strong> {{$user->name}}</p>
             <p class="card-text"><strong>Email:</strong> {{$user->email}}</p>
+            <p class="card-text"><strong>Rol:</strong> {{$role->name}}</p>
             <p class="card-text"><strong>Data Creació:</strong> {{$user->created_at}}</p>
         </div>
 

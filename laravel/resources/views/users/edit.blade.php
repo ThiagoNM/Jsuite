@@ -41,6 +41,22 @@
 					</div>
 					<br>
 
+					<label for="cars">Escollir rol: </label>
+					<div class="form-group">
+						<select class="w-25" name="role_id" id="role_id">
+
+							@foreach ($roles as $role)
+								@if ($role->id === $user->role_id)
+									<option value="{{ $role->id }}" selected>{{ $role->name }}</option>
+								@else
+									<option value="{{ $role->id }}">{{ $role->name }}</option>
+								@endif
+							@endforeach
+
+						</select> 
+					</div>
+					<br>
+
 					<button class="btn btn-primary" type="submit" onClick="document.getElementById('spin').style.display='inline-block'">
 						<div id="spin" style="display: none;" class="spinner-border spinner-border-sm" role="status"></div>
 						Editar usuari

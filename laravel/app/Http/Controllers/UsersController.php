@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\File;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +30,9 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        return view("users.create", [
+            "roles" => Role::all(),
+        ]);
     }
 
 
@@ -45,6 +48,7 @@ class UsersController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|min:6',
+            'role_id' => 'required',
             'upload' => 'required|mimes:gif,jpeg,jpg,png|max:2048'
         ]);
 
@@ -61,7 +65,6 @@ class UsersController extends Controller
             $uploadName,   
             'public'        
         );
-
 
         if (Storage::disk('public')->exists($filePath)) {
 
@@ -93,7 +96,8 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         return view('users.edit',  [
-            "user" => $user
+            "user" => $user,
+            "roles" => Role::all()
         ]);
     }
 
@@ -111,35 +115,40 @@ class UsersController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
-            'upload' => 'required|mimes:gif,jpeg,jpg,png|max:2048'
+            'role_id' => 'required',
+            'upload' => 'mimes:gif,jpeg,jpg,png|max:2048'
         ]);
 
-        $file = File::where('id', $user->photo_id)->first();
+        if($request->hasFile('upload'))
+        {
+            $file = File::where('id', $user->photo_id)->first();
 
-        $antigua_ruta = $file -> filepath;
-        $upload = $request->file('upload');
-        $fileName = $upload->getClientOriginalName();
-        $fileSize = $upload->getSize();
-  
-        $uploadName = time() . '_' . $fileName;
-        $filePath = $upload->storeAs(
-            'uploads',    
-            $uploadName,   
-            'public'        
-        );
+            $antigua_ruta = $file -> filepath;
+            $upload = $request->file('upload');
+            $fileName = $upload->getClientOriginalName();
+            $fileSize = $upload->getSize();
+    
+            $uploadName = time() . '_' . $fileName;
+            $filePath = $upload->storeAs(
+                'uploads',    
+                $uploadName,   
+                'public'        
+            );
 
-        if (\Storage::disk('public')->exists($filePath)) {
+            if (\Storage::disk('public')->exists($filePath)) {
 
-            $fullPath = \Storage::disk('public')->path($filePath);
-            $file->filepath = $filePath;
-            $file->filesize = $fileSize;
-            $file->save();
+                $fullPath = \Storage::disk('public')->path($filePath);
+                $file->filepath = $filePath;
+                $file->filesize = $fileSize;
+                $file->save();
 
-            Storage::disk('public')->delete($antigua_ruta);
+                Storage::disk('public')->delete($antigua_ruta);
+            }
         }
 
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->role_id = $request->role_id;
         $user->save();
 
         return redirect()->route('users.show', $user)
@@ -155,9 +164,11 @@ class UsersController extends Controller
     public function show(User $user)
     {
         $file = File::where('id', $user->photo_id)->first();
+        $role = Role::where('id', $user->role_id)->first();
         
         return view('users.show',  [
             "user" => $user,
+            "role" => $role,
             "file" => $file
         ]);
     }
