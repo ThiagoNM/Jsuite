@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\ModelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('files', FileController::class)->middleware(['auth', 'role:3']);
+Route::resource('models', ModelController::class); 
